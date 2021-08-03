@@ -1,5 +1,8 @@
 # node
 node_modules/
 
-# Local Netlify folder
+# webpack
+dist/
+
+# netlify
 .netlify
