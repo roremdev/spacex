@@ -1,0 +1,17 @@
+//- main sections
+html {
+    @apply max-w-screen min-w-screen;
+    @apply m-center;
+    @apply font-base;
+    //- css
+    font-size: 12px;
+}
+
+body {
+    @apply w-inherit h-screen;
+    //- children
+    div#app {
+        @apply w-inherit h-inherit;
+        @apply grid place-content-center justify-items-center;
+    }
+}
