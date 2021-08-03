@@ -1,0 +1,28 @@
+{
+  "name": "spacex",
+  "version": "0.0.1",
+  "description": "Provisional React Web App made with 💙",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roremdev/spacex.git"
+  },
+  "keywords": [
+    "Webpack",
+    "React",
+    "Tailwind",
+    "Storybook"
+  ],
+  "author": "@roremDev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/roremdev/spacex/issues"
+  },
+  "homepage": "https://github.com/roremdev/spacex#readme",
+  "devDependencies": {
+    "netlify-cli": "^5.4.7"
+  }
+}
