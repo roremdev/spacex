@@ -1,15 +1,19 @@
 import { resolve, join } from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import CssMinimizerPlugin from 'css-minimizer-webpack-plugin';
+import TerserPlugin from 'terser-webpack-plugin';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 
 export default () => {
     return {
-        mode: 'development',
+        mode: 'production',
         devtool: 'source-map',
         entry: './src/index.js',
         output: {
             path: resolve(__dirname, 'dist'),
             filename: 'bundle.js',
+            publicPath: './',
         },
         resolve: {
             extensions: ['.js', '.jsx', '.scss', '.css', '.pug'],
@@ -42,7 +46,7 @@ export default () => {
                 {
                     test: /\.s[ac]ss$/i,
                     use: [
-                        'style-loader',
+                        MiniCssExtractPlugin.loader,
                         'css-loader',
                         'postcss-loader',
                         'sass-loader',
@@ -52,14 +56,14 @@ export default () => {
                     test: /\.(png|jpg|jpeg|gif|ico)$/i,
                     type: 'asset/resource',
                     generator: {
-                        filename: 'assets/images/[hash][ext][query]',
+                        filename: './assets/images/[hash][ext][query]',
                     },
                 },
                 {
                     test: /\.(svg)$/i,
                     type: 'asset/resource',
                     generator: {
-                        filename: 'assets/svg/[hash][ext][query]',
+                        filename: './assets/svg/[hash][ext][query]',
                     },
                 },
             ],
@@ -68,15 +72,14 @@ export default () => {
             new HtmlWebpackPlugin({
                 template: resolve(__dirname, './src/public/index.pug'),
             }),
+            new MiniCssExtractPlugin({
+                filename: '[name].css',
+            }),
             new CleanWebpackPlugin(),
         ],
-        devServer: {
-            contentBase: join(__dirname, 'dist'),
-            compress: true,
-            port: 3000,
-            // transportMode: 'ws',
-            injectClient: false,
-            historyApiFallback: true,
+        optimization: {
+            minimize: true,
+            minimizer: [new CssMinimizerPlugin(), new TerserPlugin()],
         },
     };
 };
