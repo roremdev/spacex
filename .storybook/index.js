@@ -27,6 +27,7 @@ export default {
                         '../src/assets/images'
                     ),
                     '@assets-svg': resolve(__dirname, '../src/assets/svg'),
+                    '@componets': resolve(__dirname, '../src/components'),
                 },
             },
         };
