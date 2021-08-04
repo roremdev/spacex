@@ -16,19 +16,6 @@ export default () =>
             filename: 'bundle.js',
             publicPath: './',
         },
-        module: {
-            rules: [
-                {
-                    test: /\.s[ac]ss$/i,
-                    use: [
-                        MiniCssExtractPlugin.loader,
-                        'css-loader',
-                        'postcss-loader',
-                        'sass-loader',
-                    ],
-                },
-            ],
-        },
         plugins: [
             new MiniCssExtractPlugin({
                 filename: '[name].css',

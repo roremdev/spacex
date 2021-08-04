@@ -14,7 +14,7 @@ export default {
             '@layouts': resolve(__dirname, '../src/layouts'),
             '@assets-images': resolve(__dirname, '../src/assets/images'),
             '@assets-svg': resolve(__dirname, '../src/assets/svg'),
-            '@componets': resolve(__dirname, '../src/components'),
+            '@components': resolve(__dirname, '../src/components'),
         },
     },
     module: {
@@ -45,6 +45,17 @@ export default {
                 generator: {
                     filename: './assets/svg/[hash][ext][query]',
                 },
+            },
+            {
+                test: /\.s[ac]ss$/i,
+                use: [
+                    process.env.NODE_ENV === 'production'
+                        ? MiniCssExtractPlugin.loader
+                        : 'style-loader',
+                    'css-loader',
+                    'postcss-loader',
+                    'sass-loader',
+                ],
             },
         ],
     },

@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Tag = ({ version }) => (
+const Tag = ({ text }) => (
     <div className="tag">
-        <span className="text">{version}</span>
+        <span className="text">{text}</span>
     </div>
 );
 
 Tag.propTypes = {
-    version: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
 };
 
 export default Tag;
