@@ -12,6 +12,7 @@ push branch_name
 ### NPM Actions
 ```bash
 start
+test
 dev
 build
 storybook
