@@ -8,6 +8,8 @@
                 "ignore": ["class", "id"]
             }
         ],
+        "function-parentheses-space-inside": "never",
+        "max-nesting-depth": 3,
         "scss/at-rule-no-unknown": [
             true,
             {
