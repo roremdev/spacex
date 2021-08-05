@@ -1,9 +1,7 @@
 .buttonlink {
+    @extend %items-center;
     @apply h-2 w-2;
-    @apply bg-gray;
-    @apply rounded-circle;
-    @apply grid;
-    @apply place-items-center;
+    @apply bg-gray rounded-circle;
 
     .vector {
         max-width: 50%;

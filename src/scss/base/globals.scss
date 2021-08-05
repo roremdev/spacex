@@ -1,17 +1,17 @@
-//- main sections
 html {
     @apply max-w-screen min-w-screen;
     @apply m-center;
-    @apply font-base;
-    //- css
+    @apply font-rubik;
+    @apply text-blue-dark;
+
     font-size: 12px;
 }
 
 body {
-    @apply w-inherit h-screen;
-    //- children
+    @extend %inherit;
+
     div#app {
-        @apply w-inherit h-inherit;
+        @extend %inherit;
         @apply grid place-content-center justify-items-center;
     }
 }

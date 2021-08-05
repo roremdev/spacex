@@ -1,0 +1,26 @@
+%inherit {
+    @apply w-inherit h-inherit;
+}
+
+%grid-container {
+    @apply grid;
+}
+
+%items-center {
+    @extend %grid-container;
+    @apply place-items-center;
+}
+
+%items-center-left {
+    @extend %grid-container;
+    @apply items-center grid-flow-col;
+}
+
+%flex-container {
+    @apply flex;
+}
+
+%column-between {
+    @extend %flex-container;
+    @apply flex-col justify-between;
+}

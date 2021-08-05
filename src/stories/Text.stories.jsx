@@ -1,11 +1,11 @@
 import React from 'react';
 
-import IconWebpack from '@svg/icon-webpack.svg';
-import Icon from '@components/Icon.jsx';
+export default {
+    title: 'Theme/Text',
+};
 
-const App = () => (
+export const Text = () => (
     <>
-        <img src={IconWebpack} alt="icon webpack" width="150" height="150" />
         <h1 className="title">Hello World</h1>
         <p className="body">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima
@@ -14,8 +14,5 @@ const App = () => (
             suscipit qui autem nesciunt molestiae!
         </p>
         <a className="navigation">Volver a casa</a>
-        <Icon vector="Wikipedia" />
-        <div className="btn btn-blue">Button</div>
     </>
 );
-export default App;

@@ -5,11 +5,9 @@
 }
 
 .content {
+    @extend %inherit, %column-between;
     @apply absolute;
-    @apply h-inherit w-inherit;
-    @apply bg-card rounded;
-    @apply flex flex-col justify-between;
-    @apply p-card-description;
+    @apply p-card bg-card rounded;
     @apply text-white;
 
     .buttonlink {
@@ -17,7 +15,7 @@
     }
 
     .title {
-        @apply text-card-description-title;
+        @apply text-card-title;
 
         &-success {
             @apply text-green;
@@ -29,15 +27,13 @@
     }
 
     .schedule {
-        @apply text-card-description-helper font-bold;
-        @apply grid grid-flow-col gap-x-1;
+        @extend %items-center-left;
+        @apply gap-x-1;
+        @apply text-card-helper font-bold;
 
         div {
-            @apply grid;
-            @apply items-center grid-flow-col;
+            @extend %items-center-left;
             @apply gap-x-0.5;
-
-            grid-template-columns: min-content;
         }
 
         .vector {
@@ -47,11 +43,7 @@
 }
 
 .media {
-    @apply h-inherit w-inherit;
+    @extend %inherit, %items-center;
     @apply rounded;
-    @apply grid place-items-center;
-
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    @apply bg-center bg-no-repeat bg-cover;
 }

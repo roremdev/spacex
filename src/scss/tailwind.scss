@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 //- base -> @styles-base
+@import '@styles-base/containers';
 @import '@styles-base/globals';
 @import '@styles-base/text';
 
