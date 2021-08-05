@@ -24,3 +24,13 @@
     @extend %flex-container;
     @apply flex-col justify-between;
 }
+
+%rown-between {
+    @extend %flex-container;
+    @apply justify-between;
+}
+
+%rown-center {
+    @extend %flex-container;
+    @apply justify-center;
+}

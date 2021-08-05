@@ -1,0 +1,12 @@
+%header {
+    @apply w-inherit;
+    @apply p-header;
+}
+
+.header {
+    @extend %header, %rown-between;
+
+    &-center {
+        @extend %header, %rown-center;
+    }
+}

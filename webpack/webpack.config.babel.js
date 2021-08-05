@@ -24,6 +24,11 @@ export default {
                 loader: 'pug-loader',
             },
             {
+                test: /\.js$/,
+                enforce: 'pre',
+                use: ['source-map-loader'],
+            },
+            {
                 test: /\.(js|jsx)?$/,
                 loader: 'babel-loader',
                 exclude: /node_modules/,

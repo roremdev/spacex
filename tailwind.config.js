@@ -32,6 +32,7 @@ export const theme = {
         },
         padding: {
             card: '12px 12px 8px',
+            header: '36px 60px 0px',
         },
         fontSize: {
             'card-title': '14px',

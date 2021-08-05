@@ -7,7 +7,7 @@
         "postinstall": "npx husky install && npx husky add .husky/prepare-commit-msg 'npx --no-install devmoji -e'",
         "test": "jest --env=jsdom",
         "build": "webpack --config webpack/webpack.config.prod.babel.js",
-        "dev": "npm run build && live-server --port=8080 --host=localhost --open=./dist",
+        "dev": "npm run build && live-server --port=8080 --host=localhost --mount=/:./dist",
         "start": "webpack serve --config webpack/webpack.config.dev.babel.js",
         "storybook": "start-storybook -p 6006",
         "build-storybook": "build-storybook"
@@ -62,6 +62,7 @@
         "pug-loader": "^2.4.0",
         "sass": "^1.37.2",
         "sass-loader": "^12.1.0",
+        "source-map-loader": "^3.0.0",
         "style-loader": "^3.2.1",
         "stylelint": "^13.13.1",
         "stylelint-config-sass-guidelines": "^8.0.0",
