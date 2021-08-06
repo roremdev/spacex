@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 //- base -> @styles-base
-@import '@styles-base/containers';
 @import '@styles-base/globals';
 @import '@styles-base/text';
 
@@ -12,4 +11,8 @@
 @import '@styles-components/card';
 @import '@styles-components/header';
 
+//- pages -> @styles-pages
+@import '@styles-pages/home';
+
 //- utilities -> @styles-utils
+@import '@styles-utils/containers';

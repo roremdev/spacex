@@ -1,5 +1,5 @@
 html {
-    @apply max-w-screen min-w-screen w-screen;
+    @apply max-w-screen min-w-screen w-screen h-screen;
     @apply m-center;
     @apply font-rubik;
     @apply text-blue-dark;
@@ -8,10 +8,7 @@ html {
 }
 
 body {
-    @extend %inherit;
-
     div#app {
-        @extend %inherit;
-        @apply grid place-content-center justify-items-center;
+        @apply grid;
     }
 }

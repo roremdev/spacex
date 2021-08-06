@@ -1,0 +1,15 @@
+main.home {
+    @apply mt-3 px-5;
+
+    .title-container {
+        @extend %items-center-left;
+        @apply gap-2;
+        grid-template-columns: max-content auto;
+    }
+
+    .gallery {
+        @apply mt-2;
+        @apply grid justify-center gap-4;
+        grid-template-columns: repeat(3, auto);
+    }
+}
