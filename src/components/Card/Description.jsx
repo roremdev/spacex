@@ -5,7 +5,7 @@ import Schedule from './Schedule.jsx';
 
 const Description = ({ title, schedule, success }) => (
     <div className="description">
-        <span className={success ? 'title-success' : 'title-failed'}>
+        <span className={`title ${success ? 'title-success' : 'title-failed'}`}>
             {title}
         </span>
         <Schedule {...schedule} />

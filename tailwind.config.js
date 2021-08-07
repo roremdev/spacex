@@ -32,18 +32,12 @@ export const theme = {
         },
         padding: {
             card: '12px 12px 8px',
-            header: '36px 60px 0px',
-        },
-        fontSize: {
-            'card-title': '14px',
-            'card-helper': '10px',
         },
     },
     colors: {
         font: '#002F61',
-        blue: '#005288',
         blue: {
-            DEFALUT: '#005288',
+            DEFAULT: '#005288',
             dark: '#002F61',
         },
         gray: '#F8F9FB',
@@ -55,18 +49,24 @@ export const theme = {
         rubik: ['Rubik', 'sans-serif'],
     },
     fontSize: {
+        sm: '0.875rem', // 10.5
         base: '1rem',
-        navigation: '1.5rem',
-        body: '2rem',
-        title: '3rem',
+        lg: '1.25rem', // 15
+        xl: '1.5rem',
+        '2xl': '2rem',
+        '3xl': '3rem',
     },
     spacing: {
+        0: '0',
         0.5: '0.5rem',
         1: '1rem',
         2: '2rem',
         3: '3rem',
         4: '4rem',
         5: '5rem',
+        7: '7rem',
+        9: '9rem',
+        12: '12rem',
     },
     borderRadius: {
         DEFAULT: '10px',

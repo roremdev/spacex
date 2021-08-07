@@ -3,6 +3,11 @@
     @apply h-2 w-2;
     @apply bg-gray rounded-circle;
 
+    @screen sm {
+        height: 45px;
+        width: 45px;
+    }
+
     .vector {
         max-width: 50%;
     }

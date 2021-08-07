@@ -1,0 +1,9 @@
+.gallery {
+    @apply mt-2 mb-12;
+    @apply grid justify-center gap-4;
+    grid-template-columns: repeat(3, auto);
+
+    @screen sm {
+        grid-template-columns: 1fr;
+    }
+}

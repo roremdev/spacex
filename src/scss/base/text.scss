@@ -2,15 +2,19 @@
 
 h1.title {
     @apply font-medium;
-    @apply text-title;
+    @apply text-3xl;
+
+    @screen sm {
+        @apply text-2xl;
+    }
 }
 
 p.body {
     @apply font-light;
-    @apply text-body;
+    @apply text-base;
 }
 
 a.navigation {
     @apply font-normal;
-    @apply text-navigation underline;
+    @apply text-xl underline;
 }

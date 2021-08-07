@@ -3,13 +3,17 @@
     filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25))
         drop-shadow(0 3px 7px rgba(0, 0, 0, 0.3));
     height: 290px;
-    width: 180px;
+    min-width: 180px;
+
+    @screen sm {
+        height: 450px;
+    }
 }
 
 .content {
     @extend %column-between;
     @apply absolute;
-    @apply h-inherit;
+    @apply h-inherit w-full;
     @apply p-card bg-card rounded;
     @apply text-white;
 
@@ -18,7 +22,11 @@
     }
 
     .title {
-        @apply text-card-title;
+        @apply text-lg;
+
+        @screen sm {
+            @apply text-base;
+        }
 
         &-success {
             @apply text-green;
@@ -32,7 +40,11 @@
     .schedule {
         @extend %items-center-left;
         @apply gap-x-1;
-        @apply text-card-helper font-bold;
+        @apply text-sm font-bold;
+
+        @screen sm {
+            @apply text-xl;
+        }
 
         div {
             @extend %items-center-left;
@@ -41,6 +53,10 @@
 
         .vector {
             max-width: 10px;
+
+            @screen sm {
+                max-width: 20px;
+            }
         }
     }
 }

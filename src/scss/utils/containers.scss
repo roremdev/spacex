@@ -10,6 +10,7 @@
 %items-center-left {
     @extend %grid-container;
     @apply items-center grid-flow-col;
+    grid-template-columns: max-content;
 }
 
 %flex-container {
@@ -28,5 +29,5 @@
 
 %rown-center {
     @extend %flex-container;
-    @apply justify-center;
+    @apply justify-center items-center;
 }

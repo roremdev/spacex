@@ -1,9 +1,24 @@
 %header {
-    @apply p-header;
+    @apply px-5 pt-3;
+
+    @screen sm {
+        @apply fixed top-0 z-10;
+        @apply w-full;
+        @apply px-2 py-3;
+        @apply bg-white;
+
+        align-items: flex-end;
+    }
 }
 
 .header {
     @extend %header, %rown-between;
+
+    @screen sm {
+        img {
+            width: 227px;
+        }
+    }
 
     &-center {
         @extend %header, %rown-center;

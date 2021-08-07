@@ -1,7 +1,7 @@
 import React from 'react';
 
+import Gallery from '@components/Gallery.jsx';
 import Astronaut from '@svg/astronaut.svg';
-import Card from '@components/card/Card.jsx';
 
 const Home = () => (
     <main className="home">
@@ -9,12 +9,7 @@ const Home = () => (
             <img src={Astronaut} alt="astronaut" />
             <h1 className="title">Lanzamientos recientes</h1>
         </div>
-        <div className="gallery grid">
-            <Card success={true} link={false} />
-            <Card success={true} link={false} />
-            <Card success={true} link={false} />
-            <Card success={true} link={false} />
-        </div>
+        <Gallery />
     </main>
 );
 
