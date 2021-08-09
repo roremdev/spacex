@@ -17,15 +17,11 @@
     @apply p-card bg-card rounded;
     @apply text-white;
 
-    .buttonlink {
-        @apply self-end;
-    }
-
     .title {
         @apply text-lg;
 
         @screen sm {
-            @apply text-base;
+            @apply text-2xl;
         }
 
         &-success {

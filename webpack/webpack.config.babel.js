@@ -17,6 +17,7 @@ export default {
             '@images': resolve(__dirname, '../src/assets/images'),
             '@svg': resolve(__dirname, '../src/assets/svg'),
             '@components': resolve(__dirname, '../src/components'),
+            '@graphql': resolve(__dirname, '../src/graphql'),
         },
     },
     module: {

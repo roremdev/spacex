@@ -1,6 +1,9 @@
 main.home {
     @apply mt-3 px-5;
 
+    display: grid;
+    grid-template-rows: min-content 1fr;
+
     @screen sm {
         @apply px-2;
         margin-top: 108px;
@@ -14,5 +17,10 @@ main.home {
         @screen sm {
             @apply gap-x-1;
         }
+    }
+
+    span {
+        align-self: center;
+        justify-self: center;
     }
 }

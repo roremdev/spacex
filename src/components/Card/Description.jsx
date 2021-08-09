@@ -15,7 +15,6 @@ const Description = ({ title, schedule, success }) => (
 Description.propTypes = {
     title: PropTypes.string.isRequired,
     schedule: PropTypes.object.isRequired,
-    success: PropTypes.bool.isRequired,
 };
 
 export default Description;

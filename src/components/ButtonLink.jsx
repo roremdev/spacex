@@ -1,20 +1,19 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Icon from '@components/Icon.jsx';
 import Wikipedia from '@svg/wikipedia.svg';
 
 const ButtonLink = ({ link }) => (
-    <div
-        className="buttonlink"
+    <a
+        href={link}
+        target="_blank"
+        className="self-end"
         style={{ visibility: link ? 'visible' : 'hidden' }}
     >
-        <Icon vector={Wikipedia} />
-    </div>
+        <div className="buttonlink">
+            <Icon vector={Wikipedia} />
+        </div>
+    </a>
 );
-
-ButtonLink.propTypes = {
-    link: PropTypes.bool.isRequired,
-};
 
 export default ButtonLink;
