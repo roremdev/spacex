@@ -1,9 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Icon from '@components/Icon.jsx';
 import Wikipedia from '@svg/wikipedia.svg';
 
-const ButtonLink = ({ link, vector }) => (
+const ButtonLink = ({ link }) => (
     <a
         href={link}
         target="_blank"
@@ -11,9 +12,13 @@ const ButtonLink = ({ link, vector }) => (
         style={{ visibility: link ? 'visible' : 'hidden' }}
     >
         <div className="buttonlink">
-            <Icon vector={vector ?? Wikipedia} />
+            <Icon vector={Wikipedia} />
         </div>
     </a>
 );
+
+ButtonLink.propTypes = {
+    link: PropTypes.string,
+};
 
 export default ButtonLink;

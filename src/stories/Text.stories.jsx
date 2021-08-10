@@ -2,17 +2,17 @@ import React from 'react';
 
 export default {
     title: 'Theme/Text',
+    args: {
+        title: 'A little title',
+        body: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.',
+        navigation: 'Go to Home',
+    },
 };
 
-export const Text = () => (
+export const Text = ({ title, body, navigation }) => (
     <>
-        <h1 className="title">Hello World</h1>
-        <p className="body">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima
-            reiciendis id, amet itaque blanditiis quaerat quibusdam adipisci!
-            Voluptatem ab laborum animi aliquid vero impedit, consequatur
-            suscipit qui autem nesciunt molestiae!
-        </p>
-        <a className="navigation">Volver a casa</a>
+        <h1 className="title">{title}</h1>
+        <p className="body">{body}</p>
+        <a className="navigation">{navigation}</a>
     </>
 );

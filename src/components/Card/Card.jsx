@@ -35,9 +35,13 @@ const Card = ({
 };
 
 Card.prototype = {
-    image: PropTypes.node.isRequired,
-    success: PropTypes.bool.isRequired,
-    link: PropTypes.string.isRequired,
+    mission_name: PropTypes.string.isRequired,
+    launch_success: PropTypes.bool.isRequired,
+    launch_date_local: PropTypes.string.isRequired,
+    link: PropTypes.shape({
+        wikipedia: PropTypes.string,
+        flickr_images: PropTypes.array,
+    }),
 };
 
 export default Card;

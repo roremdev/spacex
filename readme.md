@@ -30,3 +30,7 @@ For this project, we can use the next npm scripts:
 |`dev`       |Launch prod server                                      |
 |`build`     |Generate static files                                   |
 |`storybook` |Launch web components visualiser                        |
+
+### Documentation
+
+View [Figma](https://www.figma.com/file/KaoUgEwCM8WGF7TkD6Tv3X/Apps?node-id=17%3A83)
