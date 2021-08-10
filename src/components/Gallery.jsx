@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 
 import { getLaunchesPast } from '@graphql/index.js';
 import Loader from '@components/Loader.jsx';
-import Card from '@components/card/Card.jsx';
+import Card from '@components/Card/Card.jsx';
 
 const Gallery = () => {
     const offset = useSelector((state) => state.page.current);
