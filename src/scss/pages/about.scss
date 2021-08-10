@@ -1,0 +1,40 @@
+.about {
+    display: grid;
+    justify-items: center;
+    row-gap: 36px;
+    margin: 350px auto 0;
+    width: 900px;
+
+    @screen sm {
+        width: 100%;
+        margin-top: 120px;
+        padding: 0 24px;
+    }
+
+    div.text {
+        display: grid;
+        row-gap: 12px;
+    }
+
+    div.description {
+        display: grid;
+        row-gap: 12px;
+    }
+
+    div.links-social {
+        display: grid;
+        grid-auto-flow: column;
+        column-gap: 12px;
+    }
+
+    span {
+        align-self: center;
+        justify-self: center;
+    }
+}
+
+div.text {
+    h1.title {
+        @apply text-center;
+    }
+}

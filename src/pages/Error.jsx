@@ -1,10 +1,17 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-import Header from '@components/Header.jsx';
+import NotFound from '@svg/notfound.svg';
 
 const Error = () => (
-    <>
-        <p>ERROR</p>
-    </>
+    <main className="error">
+        <div>
+            <h1 className="title">Página no encontrada.</h1>
+            <img src={NotFound} alt="not found" />
+        </div>
+        <Link to="/" className="navigation">
+            Volver al inicio
+        </Link>
+    </main>
 );
 export default Error;

@@ -1,13 +1,16 @@
 // TODO error
 
 import React from 'react';
-import getLaunchesPast from '@graphql/index.js';
+import { useSelector } from 'react-redux';
 
+import { getLaunchesPast } from '@graphql/index.js';
 import Loader from '@components/Loader.jsx';
 import Card from '@components/card/Card.jsx';
 
 const Gallery = () => {
-    const { loading, data } = getLaunchesPast({ offset: 0 });
+    const offset = useSelector((state) => state.page.current);
+
+    const { loading, data } = getLaunchesPast({ offset });
 
     if (loading) return <Loader />;
 

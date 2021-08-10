@@ -1,6 +1,6 @@
 import { gql, useQuery } from '@apollo/client';
 
-const query = gql`
+const queryLaunchesPast = gql`
     query launchesPast($offset: Int) {
         launchesPast(limit: 12, offset: $offset) {
             id
@@ -15,9 +15,23 @@ const query = gql`
     }
 `;
 
-const getLaunchesPast = ({ offset }) =>
-    useQuery(query, {
+const queryAbout = gql`
+    query {
+        company {
+            links {
+                website
+                twitter
+                flickr
+            }
+            name
+            summary
+        }
+    }
+`;
+
+export const getLaunchesPast = ({ offset }) =>
+    useQuery(queryLaunchesPast, {
         variables: { offset },
     });
 
-export default getLaunchesPast;
+export const getAbout = () => useQuery(queryAbout);

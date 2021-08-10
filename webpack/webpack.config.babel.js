@@ -18,6 +18,7 @@ export default {
             '@svg': resolve(__dirname, '../src/assets/svg'),
             '@components': resolve(__dirname, '../src/components'),
             '@graphql': resolve(__dirname, '../src/graphql'),
+            '@redux': resolve(__dirname, '../src/redux'),
         },
     },
     module: {
